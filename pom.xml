@@ -162,10 +162,18 @@
         </dependency>
 
         <!-- c3p0连接池 -->
+        <!--<dependency>-->
+            <!--<groupId>com.mchange</groupId>-->
+            <!--<artifactId>c3p0</artifactId>-->
+            <!--<version>0.9.5.2</version>-->
+        <!--</dependency>-->
+
+        <!-- dbcp连接池 -->
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.2</version>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+            <!--<scope>runtime</scope>-->
         </dependency>
 
         <!-- jstl标签 -->
@@ -188,11 +196,17 @@
             <version>2.4</version>
         </dependency>
 
-        <!-- jackson jar包 -->
+        <!-- json jar包 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.33</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.12</version>
         </dependency>
 
         <dependency>
