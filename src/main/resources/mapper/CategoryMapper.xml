@@ -116,4 +116,9 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <!--List<Demo> listDemo();-->
+  <select id="listDemo" resultType="Demo">
+    select * from mmall_category
+  </select>
 </mapper>

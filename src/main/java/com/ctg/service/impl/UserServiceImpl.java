@@ -6,7 +6,6 @@ import com.ctg.dao.UserMapper;
 import com.ctg.pojo.User;
 import com.ctg.service.IUserService;
 import com.ctg.utils.MD5Util;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,7 +55,7 @@ public class UserServiceImpl implements IUserService{
         return ServerResponse.createBySuccessMessage("注册成功");
     }
 
-
+    @Override
     public ServerResponse<String> checkValid(String str,String type){
         if(org.apache.commons.lang3.StringUtils.isNotBlank(type)){
             //开始校验
