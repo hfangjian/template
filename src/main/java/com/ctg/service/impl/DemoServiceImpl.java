@@ -23,6 +23,12 @@ public class DemoServiceImpl implements IDemoService{
 
     @Override
     public ServerResponse<Page> listDemo(DemoVO demoVO) {
+        if(demoVO.getPageIndex() == null){
+            demoVO.setPageIndex(0);
+        }
+        if(demoVO.getPageSize() == null){
+            demoVO.setPageSize(3);
+        }
         PageHelper.startPage(demoVO.getPageIndex()+1,demoVO.getPageSize());
         List<Demo> list = categoryMapper.listDemo();
         Page pageList = (Page)list;
