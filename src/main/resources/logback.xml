@@ -12,11 +12,11 @@
     </appender>
 
     <appender name="ctg" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>d:/tomcatLog/ctg.log</File>
-        <!--<File>/usr/tomcat/apache-tomcat-7.0.69/logs/ctg.log</File>-->
+        <!--<File>d:/tomcatLog/ctg.log</File>-->
+        <File>/opt/tomcat/logs/weixin.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>d:/tomcatLog/ctg.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
-            <!--<fileNamePattern>/usr/tomcat/apache-tomcat-7.0.69/logs/ctg.log.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
+            <!--<fileNamePattern>d:/tomcatLog/ctg.log.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
+            <fileNamePattern>/opt/tomcat/logs/weixin.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <append>true</append>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
@@ -27,13 +27,13 @@
 
 
     <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>d:/tomcatLog/error.log</File>
-        <!--<File>/usr/tomcat/apache-tomcat-7.0.69/logs/error.log</File>-->
+        <!--<File>d:/tomcatLog/error.log</File>-->
+        <File>/opt/tomcat/logs/weixinerror.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 发布到Linux服务器上时的日志路径： -->
-            <!--<fileNamePattern>/usr/tomcat/apache-tomcat-7.0.69/logs/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
+            <fileNamePattern>/opt/tomcat/logs/wixinerror.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
             <!-- 本地服务器上时的日志路径： -->
-            <fileNamePattern>d:/tomcatLog/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <!--<fileNamePattern>d:/tomcatLog/error.log.%d{yyyy-MM-dd}.gz</fileNamePattern>-->
             <append>true</append>
             <maxHistory>10</maxHistory>
         </rollingPolicy>
